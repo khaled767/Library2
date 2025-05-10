@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: monospace;
+            background: darkgoldenrod;
+            margin: 0;
+            padding: 0;
+        }
+        .intro{
+            box-shadow: 9px 7px 8px 7px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+            padding: 30px;
+            justify-content: center ;
+            color:#007908;
+            text-align: center;
+        }
+        .addBook{
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: 700;
+            background-color:#007908;
+            cursor: pointer;
+            transition: width 4s;
+        }
+        .form{
+           display: none;
+           flex-direction: column;
+            width: 30%;
+            height: auto;
+            margin: auto;
+            position:absolute;    
+            right: 400px;
+        }
+        .inputs{
+            display: contents;
+            height: 100px;
+            align-items: center;
+        }
+        .inputs input{
+            height: 40px;
+            border-radius: 20px;
+            margin: 5px;
+            text-align: center;
+            font-size:16px;
+        }
+        .readcheck{
+            display: flex;
+            justify-content: center;
+            height: 20px;
+            margin: 10px;
+            font-size: 20px;
+        }
+        #check{
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .submitButton{
+            display: flex;
+            justify-content:space-around;
+            height: 40px;
+            margin-top: 15px;
+            width: 100%;
+        }
+        .submitButton button{
+            border-radius: 20px;
+            background-color:#007908;
+            width: 120px;
+            cursor: pointer;
+            transition: width 4s;
+        }
+        button:hover{
+            background-color: #a05a39;
+            width: 200px;
+        }
+        .showbooks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .book-card {
+            background-color:#edb733;
+            color:#007908;
+            border-radius: 12px;
+            box-shadow: 9px 7px 8px 7px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 200px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.6s ease;
+        }
+        .book-card:hover {
+            transform: scale(1.05);
+        }
+ 
+        .book-cover {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>Library In Classes Style</h1>
+        <button class="addBook">Add Book</button>
+    </div>
+    <div class="form">
+      <div class="inputs">
+        <input type="text" placeholder="book-title" id="title">
+        <input type="text" placeholder="book-author" id="author">
+        <input type="number" placeholder="book-pages" id="pages">
+        <input type="file" id="coverImageInput" accept="image/*">
+      </div>
+        <div class="readcheck">
+            <input type="checkbox" class="read" id="check">
+            <span class="status" id="readboxspan">not read</span>
+        </div>
+        <div class="submitButton">
+            <button type="button" id="save">save</button>
+            <button type="reset" id="cancel">cancel</button>
+        </div>
+    </div>
+    <div class="showbooks">
+ 
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+
